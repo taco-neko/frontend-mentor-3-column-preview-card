@@ -1,0 +1,148 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --v-dark-cyan: hsl(179, 100%, 13%);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--light-gray);
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  margin: -1px;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: var(--light-gray);
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.938rem;
+  color: var(--trans-white);
+  line-height: 1.5em;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.75;
+}
+a:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.card {
+  background-color: pink;
+  width: 56.25rem;
+  max-width: 90%;
+  margin: 8rem auto;
+  border-radius: 0.5em;
+  display: flex;
+  overflow: hidden;
+}
+@media screen and (max-width: 50em) {
+  .card {
+    flex-direction: column;
+  }
+}
+
+article {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  min-height: 28.125rem;
+}
+@media screen and (max-width: 50em) {
+  article {
+    min-height: auto;
+  }
+}
+
+img {
+  width: 3.5rem;
+}
+
+.sedan {
+  background-color: var(--orange);
+}
+.sedan button {
+  color: var(--orange);
+}
+.sedan button:hover, .sedan button:focus-visible {
+  background-color: var(--orange);
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+.suv button {
+  color: var(--dark-cyan);
+}
+.suv button:hover, .suv button:focus-visible {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--v-dark-cyan);
+}
+.luxury button {
+  color: var(--v-dark-cyan);
+}
+.luxury button:hover, .luxury button:focus-visible {
+  background-color: var(--v-dark-cyan);
+}
+
+button {
+  margin-top: auto;
+  width: 9em;
+  height: 3em;
+  border-radius: 2em;
+  border: transparent;
+  background-color: var(--light-gray);
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+button:hover, button:focus-visible {
+  outline: none;
+  border: 2px solid var(--light-gray);
+  color: var(--light-gray);
+}
+
+.attribution {
+  text-align: center;
+}
+.attribution p {
+  color: var(--v-dark-cyan);
+}
